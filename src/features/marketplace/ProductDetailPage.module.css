@@ -1,0 +1,142 @@
+.page {
+  padding-block: var(--space-6) var(--space-9);
+}
+
+/* Clear the fixed mobile purchase bar. */
+@media (max-width: 879px) {
+  .page {
+    padding-bottom: 92px;
+  }
+}
+
+.stateWrap {
+  margin-top: var(--space-6);
+}
+
+.layout {
+  margin-top: var(--space-5);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+}
+
+.media {
+  align-self: start;
+}
+
+.buy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.brand {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.name {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.tagline {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.introMeta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.saveAction {
+  margin-left: auto;
+}
+
+.save {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-success);
+  background: var(--color-success-soft);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  line-height: var(--line-height-base);
+}
+
+.disclaimer svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.ctaSummary {
+  display: flex;
+  flex-direction: column;
+  line-height: var(--line-height-tight);
+}
+
+.ctaSummary strong {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.ctaSub {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-top: 3px;
+}
+
+.details {
+  margin-top: var(--space-7);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.about {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.recent {
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 880px) {
+  .layout {
+    grid-template-columns: minmax(300px, 440px) minmax(0, 1fr);
+    gap: var(--space-9);
+    align-items: start;
+  }
+
+  .media {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-5));
+  }
+
+  .name {
+    font-size: var(--font-size-3xl);
+  }
+}

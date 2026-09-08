@@ -1,0 +1,162 @@
+/**
+ * 1Fi design tokens.
+ *
+ * Central source of truth for colour, typography, spacing, radius and
+ * elevation. Feature and component styles must consume these variables
+ * rather than hard-coding values, so the Marketplace stays visually
+ * consistent with the rest of the 1Fi app.
+ *
+ * Palette follows the 1Fi brand: a vibrant violet primary on a near-white
+ * lavender ground, near-black headings, and a violet→fuchsia gradient for
+ * headline emphasis.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* ---- Brand palette ---- */
+  --color-primary: #7c3aed;
+  --color-primary-strong: #6d28d9;
+  --color-primary-soft: #f1ebfe;
+  --color-primary-contrast: #ffffff;
+
+  /* Near-black — headings, wordmark, high-emphasis text. */
+  --color-ink: #100f1a;
+
+  --color-accent: #7c3aed;
+  --color-accent-soft: #f1ebfe;
+
+  /* violet → fuchsia, for headline emphasis words */
+  --gradient-brand: linear-gradient(96deg, #7c3aed 0%, #c026d3 100%);
+
+  /* ---- Neutrals (faintly violet-tinted) ---- */
+  --color-bg: #ffffff;
+  --color-surface: #f7f5fc;
+  --color-surface-raised: #ffffff;
+  --color-border: #ebe9f4;
+  --color-border-strong: #dbd7ec;
+
+  --color-text: #26262f;
+  --color-text-secondary: #6a6a78;
+  --color-text-tertiary: #9a9aa8;
+  --color-text-on-primary: #ffffff;
+
+  /* ---- Status ---- */
+  --color-success: #12a150;
+  --color-success-soft: #e7f6ee;
+  --color-danger: #e5484d;
+  --color-danger-soft: #fdecec;
+  --color-warning: #d98411;
+  --color-warning-soft: #fdf2e2;
+
+  /* ---- Component surfaces ---- */
+  --color-header-bg: rgba(255, 255, 255, 0.92);
+  --skeleton-shine: rgba(255, 255, 255, 0.65);
+  --hero-fade: rgba(241, 235, 254, 0);
+
+  /* ---- Typography ---- */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif;
+  /* Bold grotesque for headings / wordmark — matches 1Fi's display face. */
+  --font-family-display: 'Plus Jakarta Sans', 'Inter', -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --font-size-xs: 0.75rem; /* 12 */
+  --font-size-sm: 0.875rem; /* 14 */
+  --font-size-md: 1rem; /* 16 */
+  --font-size-lg: 1.125rem; /* 18 */
+  --font-size-xl: 1.375rem; /* 22 */
+  --font-size-2xl: 1.75rem; /* 28 */
+  --font-size-3xl: 2.5rem; /* 40 */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --line-height-tight: 1.12;
+  --line-height-base: 1.5;
+
+  /* ---- Spacing (4pt grid) ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 56px;
+  --space-10: 72px;
+
+  /* ---- Radius ---- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-pill: 999px;
+  /* 1Fi buttons are rounded rectangles, not pills. */
+  --radius-button: 14px;
+
+  /* ---- Elevation ---- */
+  --shadow-sm: 0 1px 2px rgba(16, 15, 26, 0.06);
+  --shadow-md: 0 6px 20px rgba(16, 15, 26, 0.08);
+  --shadow-lg: 0 16px 40px rgba(76, 29, 149, 0.12);
+
+  /* ---- Layout ---- */
+  --page-max-width: 1160px;
+  --prose-max-width: 720px;
+  --header-height: 64px;
+  --page-gutter: clamp(16px, 5vw, 40px);
+
+  --transition-fast: 120ms ease;
+  --transition-base: 200ms ease;
+}
+
+/**
+ * Dark theme — only the colour tokens change; spacing, type and radius
+ * are shared. Applied when the inline script / theme hook sets
+ * `data-theme="dark"` on <html>.
+ */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-primary: #8b5cf6;
+  --color-primary-strong: #a78bfa;
+  --color-primary-soft: #241d3a;
+  --color-primary-contrast: #ffffff;
+
+  --color-ink: #f3f0ff;
+
+  --color-accent: #8b5cf6;
+  --color-accent-soft: #241d3a;
+
+  --gradient-brand: linear-gradient(96deg, #a78bfa 0%, #e879f9 100%);
+
+  --color-bg: #0f0d17;
+  --color-surface: #1a1726;
+  --color-surface-raised: #201b30;
+  --color-border: #2b2740;
+  --color-border-strong: #3d3757;
+
+  --color-text: #eceaf5;
+  --color-text-secondary: #a3a0b5;
+  --color-text-tertiary: #726f87;
+  --color-text-on-primary: #ffffff;
+
+  --color-success: #34d399;
+  --color-success-soft: #123024;
+  --color-danger: #ff6b60;
+  --color-danger-soft: #331a1a;
+  --color-warning: #f5a623;
+  --color-warning-soft: #33270f;
+
+  --color-header-bg: rgba(15, 13, 23, 0.82);
+  --skeleton-shine: rgba(255, 255, 255, 0.06);
+  --hero-fade: rgba(36, 29, 58, 0);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.55);
+}

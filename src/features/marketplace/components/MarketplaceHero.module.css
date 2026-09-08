@@ -1,0 +1,111 @@
+.hero {
+  background: linear-gradient(
+    180deg,
+    var(--color-primary-soft),
+    var(--color-bg) 92%
+  );
+  border-bottom: 1px solid var(--color-border);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  padding-block: var(--space-8);
+}
+
+.copy {
+  max-width: 34rem;
+}
+
+.kicker {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.title {
+  margin-top: var(--space-3);
+  font-size: var(--font-size-xl);
+  line-height: 1.15;
+  color: var(--color-ink);
+  text-wrap: balance;
+}
+
+.accent {
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.lede {
+  margin-top: var(--space-3);
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+}
+
+/* Key terms, laid out as a hairline-divided card. */
+.facts {
+  align-self: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-raised);
+  overflow: hidden;
+}
+
+.fact {
+  padding: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+}
+
+.fact:nth-child(-n + 2) {
+  border-top: none;
+}
+
+.fact:nth-child(odd) {
+  border-left: none;
+}
+
+.fact dt {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-tertiary);
+}
+
+.fact dd {
+  margin-top: 4px;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+@media (min-width: 720px) {
+  .title {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (min-width: 900px) {
+  .inner {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 380px);
+    align-items: center;
+    gap: var(--space-9);
+    padding-block: var(--space-9);
+  }
+
+  .title {
+    letter-spacing: -0.035em;
+  }
+
+  .facts {
+    grid-template-columns: 1fr 1fr;
+  }
+}

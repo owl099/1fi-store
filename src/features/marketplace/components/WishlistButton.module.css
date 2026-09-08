@@ -1,0 +1,68 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-secondary);
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.sm {
+  width: 30px;
+  height: 30px;
+}
+
+.md {
+  width: 38px;
+  height: 38px;
+}
+
+/* Floating on top of product imagery. */
+.overlay {
+  background: var(--color-bg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.overlay:hover {
+  color: var(--color-primary);
+}
+
+/* Sitting in a normal content row (detail page). */
+.inline {
+  width: auto;
+  height: 38px;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--color-border-strong);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.inline:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.inline[aria-pressed='true'] {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.heart {
+  color: inherit;
+}
+
+.heartOn {
+  color: var(--color-primary);
+}

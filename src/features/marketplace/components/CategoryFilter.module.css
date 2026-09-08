@@ -1,0 +1,15 @@
+.scroller {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.row {
+  display: flex;
+  gap: var(--space-2);
+  min-width: max-content;
+  padding-block: var(--space-1);
+}

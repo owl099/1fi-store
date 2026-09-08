@@ -1,0 +1,45 @@
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.tick {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-success);
+}
+
+.specs {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.specRow {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+.specRow + .specRow {
+  border-top: 1px solid var(--color-border);
+}
+
+.specRow dt {
+  color: var(--color-text-secondary);
+}
+
+.specRow dd {
+  font-weight: var(--font-weight-medium);
+}
